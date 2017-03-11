@@ -4,7 +4,10 @@ public class DoublyLinkedList {
     private int size;
     
 
-
+    public DoublyLinkedList(){
+         head = null;
+         size = 0;
+     }
 
 
 }
