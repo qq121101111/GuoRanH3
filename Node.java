@@ -1,9 +1,10 @@
 public class Node{
-
+      // Properties
       private String data;
       public Node previous;
       public Node next;
 
+      // Constructor
     public Node (String data) {
       
           previous = null;
