@@ -20,5 +20,22 @@ public class DoublyLinkedList {
         size++;
     }
 
+     public void traverseBackwards(String data) {
+        if(head == null)
+          head = new Node(null, data, null);
+        else{
+          Node current = head;
+          while(current.next != null){
+              current = current.next;
+          }
+          Node newNode = new Node(current, data, null);
+          current.next = newNode;
+        }
+          size++;
+        }
+    
+    
+    
+    
 }
        
