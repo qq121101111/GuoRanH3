@@ -35,7 +35,20 @@ public class DoublyLinkedList {
         }
     
     
+   
+     public void print(){
+        Node current = head;
+        while(current != null) {
+           System.out.println(current.Data());
+           current = current.next;
+        }
+    }
+    public boolean isEmpty() {
+        return head == null;    
     
+    }
+    
+
     
 }
        
