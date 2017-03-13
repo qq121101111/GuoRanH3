@@ -11,5 +11,10 @@ public static void main(String[] args){
     dll.traverseForwards("B");
     dll.traverseForwards("A");
     dll.print();
+     System.out.println(".............................");
+    dll.deleteNode(1);
+    
+    dll.print();
+
 }
 }
