@@ -12,6 +12,17 @@ public static void main(String[] args){
     dll.traverseForwards("A");
     dll.print();
      System.out.println(".............................");
+  /*  dll.traverseBackwards("G");
+    dll.traverseBackwards("F");
+    dll.traverseBackwards("E");
+    dll.traverseBackwards("D");
+    dll.traverseBackwards("C");
+    dll.traverseBackwards("B");
+    dll.traverseBackwards("A");
+    dll.print();  */
+    
+    
+    
     dll.deleteNode(1);
     
     dll.print();
