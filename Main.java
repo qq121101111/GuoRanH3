@@ -3,6 +3,15 @@ public static void main(String[] args){
 
     DoublyLinkedList dll = new DoublyLinkedList();
      
+      Node node = new Node("G");
+      Node node1 = new Node("T");
+      Node node2 = new Node("A");
+      Node node3 = new Node("C");
+      Node node4 = new Node("B");
+    
+    
+    
+    
     dll.traverseForwards("G");
     dll.traverseForwards("F");
     dll.traverseForwards("E");
