@@ -127,48 +127,73 @@ public class DoublyLinkedList {
           System.out.println(currentNode);
        
      }
-    
-   /*  public void deleteNode(int index){
-      if(head == null)
-        return;
-      if(index < 1 || index > size)
-        return;
+     
+    //Delete a node from the list 
+     
+    public void deleteNode(Node n){
       
-      Node current = head;
-      int i = 1;
-      while(i < index){
-         current = current.next;
-         i++;
-       }
-      if(current.next == null){
-          current.previous.next = null;
-         
-      }
-      else if(current.previous == null){
-         current = current.next;
-         current.previous = null;
-         head = current;
-      }
-      else {
-          current.previous.next = current.next;
-          current.next.previous = current.previous;
-      }
-      size--;
-    }
+         Node currentNode = head; 
+         Node temp = null; 
+        
+         while(currentNode.getNext()!=null){
    
-     public void print(){
-        Node current = head;
-        while(current != null) {
-           System.out.println(current.Data());
-           current = current.next;
-        }
-    }
-    public boolean isEmpty() {
-        return head == null;    
+           if(currentNode.getData().equals(n.getData())){
     
+             if(currentNode==head){
+     
+               head=head.getNext();
+   
+               head.setPrevious(temp);
+     
+               return;
+    
+             }
+   
+             currentNode.getNext().setPrevious(currentNode.getPrevious());
+   
+             currentNode.getPrevious().setNext(currentNode.getNext());
+    
+             size--;
+   
+             System.out.println("The Node has been deleted");
+   
+             return;
+  
+           }
+   
+           currentNode = currentNode.getNext();
+  
+         }
+  
+         System.out.println("Can not find the Node");
+  
     }
     
-*/
+    //Destroy the list 
+    
+     public void deleteList(){
+  
+       Node currentNode = head; 
+ 
+       Node tail = getTail();
+ 
+       head = null;
+  
+       tail = null; 
+  
+       System.out.print("The entire list has been deleted");
+ 
+       size=0; 
+    
+    
+     }
+    
+     //return size
+     public int getSize(){
+ 
+       return size; 
+    
+     }
     
 }
        
