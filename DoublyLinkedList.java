@@ -1,13 +1,76 @@
 public class DoublyLinkedList {
-    
+    //properties
     private Node head;
     private int size;
+    private Node tail;
     
 
     public DoublyLinkedList(){
          head = null;
          size = 0;
+         tail = null; 
      }
+   
+    
+    //Insert a node in the list in alphabetical order 
+    
+    public void insert(Node n){
+         
+      Node temp = null; 
+      
+      if (head == null){
+                Node newNode = new Node(n.getData(),temp,temp);
+                head = newNode;
+        }
+      else {
+               
+                Node currentNode = head;
+                Node previous = null; 
+               
+                while(currentNode.getNext()!=null && n.getData().compareToIgnoreCase(currentNode.getData())>0){
+                   
+                    previous = currentNode; 
+                    currentNode = currentNode.getNext();
+            
+                }
+                
+                if(currentNode.getNext()!=null){
+                
+                  Node newNode = new Node(n.getData(),temp,currentNode);
+                  currentNode.setPrevious(n);
+
+                }
+                else {
+                  
+                 if(n.getData().compareToIgnoreCase(currentNode.getData())<0 && currentNode == head){
+                   
+                 Node newNode = new Node(n.getData(),temp,currentNode);
+                 head = newNode; 
+                 currentNode.setNext(temp);
+                 currentNode.setPrevious(newNode);
+                
+                 }
+                 else if (n.getData().compareToIgnoreCase(currentNode.getData())<0 && currentNode != head){
+                   
+                     Node newNode = new Node(n.getData(),previous,currentNode);
+                     previous.setNext(newNode);
+                     currentNode.setPrevious(newNode);
+
+                 }
+                 else {
+                   
+                     Node newNode = new Node(n.getData(),currentNode,temp);
+                     currentNode.setNext(newNode);
+
+                 }
+                 
+                }
+            }
+            size++;
+    
+  
+ }
+    
     public void traverseForwards(String data){
         if(head == null)
           head = new Node(null, data, null);
