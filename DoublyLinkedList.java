@@ -71,16 +71,21 @@ public class DoublyLinkedList {
   
  }
     
-    public void traverseForwards(String data){
-        if(head == null)
-          head = new Node(null, data, null);
-        else {
-          Node newNode = new Node(null, data, head); 
-          head.previous = newNode;
-          head = newNode;
-        }
-        
-        size++;
+    
+    //Traverse the list forwards and print
+    
+    public void traverseForwards(){
+      
+       Node currentNode = head; 
+      
+       while(currentNode.getNext()!=null){
+         
+       System.out.println(currentNode);
+       currentNode = currentNode.getNext();
+     
+       }
+     
+       System.out.println(currentNode);
     }
 
      public void traverseBackwards(String data) {
