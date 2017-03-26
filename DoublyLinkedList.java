@@ -88,21 +88,47 @@ public class DoublyLinkedList {
        System.out.println(currentNode);
     }
 
-     public void traverseBackwards(String data) {
-        if(head == null)
-          head = new Node(null, data, null);
-        else{
-          Node current = head;
-          while(current.next != null){
-              current = current.next;
-          }
-          Node newNode = new Node(current, data, null);
-          current.next = newNode;
+    //returns to the head
+    
+       public Node getHead(){
+         
+          return head;
         }
-          size++;
+
+     //returns to the tail
+       
+        public Node getTail(){
+          
+          Node current = head; 
+  
+          while(current.getNext()!=null){
+            
+          current=current.getNext();
+    
+          }
+        
+          return current;
+
         }
     
-     public void deleteNode(int index){
+    
+    //Traverse the list backwards and print
+        
+     public void traverseBackwards() {
+        
+       Node currentNode = getTail();
+  
+       while(currentNode.getPrevious()!=null){
+         
+       System.out.println(currentNode);
+       currentNode = currentNode.getPrevious();
+       
+       }
+          System.out.println(currentNode);
+       
+     }
+    
+   /*  public void deleteNode(int index){
       if(head == null)
         return;
       if(index < 1 || index > size)
@@ -142,7 +168,7 @@ public class DoublyLinkedList {
     
     }
     
-
+*/
     
 }
        
