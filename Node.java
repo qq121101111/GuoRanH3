@@ -5,11 +5,17 @@ public class Node{
       public Node next;
 
       // Constructor
+   public Node(){
+     
+        data = "";
+        
+         }
+   
     public Node (String data) {
       
-          previous = null;
+          
           this.data = data;
-          next = null;
+         
       
          }
 
@@ -21,13 +27,50 @@ public class Node{
            this.next = next;       
       
       }
+     //setter and getter
+    public String getData(){
+   
+            return data; 
 
+       }
 
+     public Node getNext(){
+       
+            return next; 
+   
+       }
+  
+      public Node getPrevious(){
+ 
+             return previous; 
+  
+       }
 
-     public String Data() {
-      
-        return data;
+      public void setData(String n){
+ 
+             data = n; 
+       
+        }
+        //set a Node parameter 
+      public void setNext(Node n){
+  
+             this.next=n; 
+ 
+        }
+         
+      public void setPrevious(Node n){
+ 
+             this.previous=n;
 
-     }
+         }
+
+          //the toString for the Node 
+      public String toString(){
+  
+             return this.getData();
+
+         }
+
+     
 }
      
