@@ -1,8 +1,8 @@
 public class Node{
       // Properties
       private String data;
-      public Node previous;
-      public Node next;
+      private Node previous;
+      private Node next;
 
       // Constructor
    public Node(){
@@ -20,7 +20,7 @@ public class Node{
          }
 
 
-    public Node(Node previous, String data, Node next){
+    public Node(String data, Node previous, Node next){
       
            this.previous = previous;
            this.data = data;
@@ -64,7 +64,7 @@ public class Node{
 
          }
 
-          //the toString for the Node 
+          //the toString
       public String toString(){
   
              return this.getData();
