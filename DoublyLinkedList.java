@@ -187,6 +187,27 @@ public class DoublyLinkedList {
     
     
      }
+     
+      //A mehtod to Find a node that matches a String
+       public boolean findNode(Node n){
+  
+         Node currentNode = head; 
+ 
+         while(currentNode.getNext()!=null){
+   
+           if(currentNode.getData().equals(n.getData())){
+   
+             return true; 
+   
+           }
+   
+           currentNode = currentNode.getNext();
+ 
+         }
+  
+         return false; 
+ 
+       }
     
      //return size
      public int getSize(){
